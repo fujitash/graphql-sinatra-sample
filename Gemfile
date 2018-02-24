@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+gem "unicorn"
+gem 'sinatra', '~> 2.0'
+gem 'graphql'
+gem 'mongoid', '~> 5.2'
+gem 'bson_ext'
