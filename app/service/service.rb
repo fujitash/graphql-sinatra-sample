@@ -1,0 +1,5 @@
+require_relative 'query/post.rb'
+require_relative 'query/comment.rb'
+require_relative 'mutation/new_post.rb'
+require_relative 'mutation/new_comment.rb'
+require_relative 'mutation/update_comment.rb'
