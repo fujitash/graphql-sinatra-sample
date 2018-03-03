@@ -10,7 +10,6 @@ MutationType = GraphQL::ObjectType.define do
 
     resolve ->(obj, args, ctx) do
       Service::Mutation::NewPost.main(args["title"], args["body"])
-      # Model::Post.where(title: args["title"], body: args["body"]).create
     end
   end
 
@@ -22,11 +21,6 @@ MutationType = GraphQL::ObjectType.define do
 
     resolve ->(obj, args, ctx) do
       Service::Mutation::NewComment.main(args["post_id"], args["comment"])
-      # post = Model::Post.find(args["post_id"])
-      # comment = Model::Comment.where(body: args["comment"]).create!
-      # post.comments << comment
-      #
-      # post
     end
   end
 
@@ -38,12 +32,6 @@ MutationType = GraphQL::ObjectType.define do
 
     resolve ->(obj, args, ctx) do
       Service::Mutation::UpdateComment.main(args["id"], args["body"])
-      # #update data
-      # Model::Comment.find(args["id"])
-      #         .update(body: args["body"])
-      #
-      # #return data
-      # Model::Comment.find(args["id"])
     end
   end
 
